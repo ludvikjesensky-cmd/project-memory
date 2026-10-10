@@ -1,4 +1,4 @@
-version: 1
+version: 2
 registry: project-memory
 guidance: GUIDANCE.md
 standard: PROJECT_STANDARD.md
@@ -6,29 +6,62 @@ create_project: CREATE_PROJECT.md
 load_project: LOAD_PROJECT.md
 consolidation: CONSOLIDATION.md
 
-# Central registry of long-lived projects.
-# A project is registered only when its source of truth can be identified.
-# Add repositories/storage locations rather than inventing placeholders.
+# Core rule: 1 Project = 1 Git Repository.
+# Related generations may share a family.
+# A project is registered only when its actual repository/source of truth is verified.
 
 projects:
-  - id: business-brief
-    name: Business Brief
+  - id: business-brief-v1
+    name: Business Brief v1
+    family: business-brief
+    generation: v1
+    status: historical
+    source_of_truth:
+      type: github
+      repository: ludvikjesensky-cmd/business-brief
+      entrypoint: PROJECT.md
+    notes:
+      - Historical generation. PROJECT.md / Project Memory standardization may still need to be applied.
+
+  - id: business-brief-v2
+    name: Business Brief v2
+    family: business-brief
+    generation: v2
+    status: historical
+    source_of_truth:
+      type: github
+      repository: ludvikjesensky-cmd/business-brief-v2
+      entrypoint: PROJECT.md
+    notes:
+      - Historical generation. PROJECT.md / Project Memory standardization may still need to be applied.
+
+  - id: business-brief-v3
+    name: Business Brief v3
+    family: business-brief
+    generation: v3
+    status: historical
+    source_of_truth:
+      type: github
+      repository: ludvikjesensky-cmd/business-brief-v3
+      entrypoint: PROJECT.md
+    notes:
+      - Historical generation and important source of failures, decisions and lessons.
+
+  - id: business-brief-v4
+    name: Business Brief v4
+    family: business-brief
+    generation: v4
     status: active
-    current_generation: v4
     source_of_truth:
       type: github
       repository: ludvikjesensky-cmd/business-brief-v4
       entrypoint: PROJECT.md
-    historical_repositories:
-      - ludvikjesensky-cmd/business-brief
-      - ludvikjesensky-cmd/business-brief-v2
-      - ludvikjesensky-cmd/business-brief-v3
     operational:
       type: supabase
-      note: Runtime state, queues, runs, artifacts and logs belong in the project's operational data plane; verify current identifiers from PROJECT.md/project memory.
+      note: Runtime state, queues, runs, artifacts and logs belong in the operational data plane; verify identifiers from PROJECT.md/project memory.
     notes:
-      - Historical generations are references and sources of lessons, not current code dependencies.
-      - Do not repeat failed v3/v4 approaches without reading project-memory/FAILURES.md once migrated to the standard.
+      - Current active generation.
+      - Before repeating older approaches, read inherited failures and history once Project Memory migration is complete.
 
   - id: school-vdf
     name: School / VDF
@@ -38,7 +71,8 @@ projects:
       repository: ludvikjesensky-cmd/skola-vdf
       entrypoint: PROJECT.md
     notes:
-      - Repository is known; Project Memory standardization still needs to be applied.
+      - Repository ownership/path must be verified before relying on this registry entry.
+      - Project Memory standardization still needs to be applied.
 
-# Register additional long-lived projects only after their actual Source of Truth
-# (repository, storage, or other canonical location) has been verified.
+# Register additional long-lived projects only after their actual Repository
+# (or explicitly supported non-Git source of truth) has been verified.
