@@ -4,7 +4,19 @@
 **Version:** 1.0  
 **Purpose:** Formální standard dlouhodobé paměti každého projektu.
 
-## 1. Povinný vstup
+## 1. Project a Repository
+
+Project je logická jednotka dlouhodobé práce. Repository je fyzické Git úložiště.
+
+Typický Project má jedno **primary repository**. V jeho kořeni žije `PROJECT.md` a v něm také kanonická `project-memory/`.
+
+PROJECT.md popisuje celý Project, nikoli pouze obsah repository. Musí tedy umět odkázat i na další repositories, Supabase, Railway, produkční soubory, externí assets a další systémy.
+
+Jeden Project může mít více repositories. Právě jedno má být označeno jako primary memory repository, pokud není explicitně zdokumentována jiná architektura.
+
+GitHub Project (planning board) není součástí tohoto standardu a nesmí být zaměňován s Projectem v Project Memory.
+
+## 17. Povinný vstup
 
 Každý dlouhodobý projekt musí mít v kořeni `PROJECT.md`.
 
