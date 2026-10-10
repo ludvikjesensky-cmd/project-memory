@@ -29,21 +29,17 @@ Před vytvořením vždy přečti `projects.yaml` a ověř, zda projekt nebo jeh
 
 Pokud jde pouze o úkol, experiment, dokument nebo dílčí workstream existujícího projektu, nevytvářej nové repository automaticky.
 
-## 3. Urči Project a Repository
+## 3. Project = Repository
 
-Nejdříve vytvoř logickou identitu Projectu. Potom urč jeho fyzický domov.
+V tomto systému CREATE PROJECT znamená vytvořit jednu novou projektovou identitu svázanou s jedním Git Repository.
 
-Standardně platí:
+**CREATE PROJECT → zajisti Repository → inicializuj PROJECT.md a Project Memory → zaregistruj Repository jako Project.**
 
-**CREATE PROJECT → zajisti primary repository → inicializuj Project Memory v repository → zaregistruj Project.**
+Pokud nový Project potřebuje nové GitHub Repository a dostupný konektor jej neumí fyzicky založit, požádej uživatele pouze o založení prázdného Repository se sjednaným názvem. Jakmile existuje, pokračuj automaticky.
 
-Project není GitHub Project board. Repository není Project. Repository je pouze jeden z fyzických zdrojů Projectu.
+Pokud má být práce součástí již existujícího Repository, nejde o nový Project podle tohoto standardu.
 
-Pokud nový Project potřebuje nové GitHub repository a aktuální GitHub konektor neumí repository fyzicky vytvořit, vyžádej pouze tento jeden ruční krok od uživatele: založení prázdného repository se sjednaným názvem. Jakmile repository existuje, pokračuj automaticky vytvořením všech potřebných souborů a registrací.
-
-Pokud Project používá existující repository, nové nevytvářej.
-
-Jeden Project může mít více repositories. Urči primary repository pro PROJECT.md a Project Memory a role ostatních repositories popiš v PROJECT.md a registru.
+Nová generace v novém Repository je nový Project. Pokud navazuje na starší Projects, nastav společné pole `family` a zaznamenej dědictví v HISTORY.
 
 ## 4. Identita
 
@@ -57,7 +53,7 @@ Stanov:
 
 Preferuj krátké stabilní názvy. Verzi produktu nevkládej do názvu repository, pokud nejde skutečně o oddělenou generaci vyžadující samostatný Source of Truth.
 
-## 13. Zajisti Repository a Source of Truth
+## 5. Zajisti Repository a Source of Truth
 
 Pokud dostupný GitHub konektor podporuje vytvoření repository a má potřebná oprávnění, může jej AI vytvořit. Pokud tuto schopnost nepodporuje, repository musí fyzicky založit uživatel. AI nesmí tvrdit, že repository vytvořila.
 
@@ -65,7 +61,7 @@ Po založení repository AI ověří jeho existenci a pokračuje inicializací s
 
 Nevytvářej paralelní repository, pokud už existuje vhodný Source of Truth.
 
-## 5. Inicializuj Project Memory
+## 6. Inicializuj Project Memory
 
 Nový projekt dostane:
 
@@ -84,7 +80,7 @@ Nový projekt dostane:
 
 Nevytvářej prázdné soubory bezmyšlenkovitě. Pokud projekt vzniká z existující práce nebo konverzace, naplň je již známými ověřenými informacemi. U oblastí bez obsahu použij stručné „None recorded yet“ nebo ekvivalent, aby bylo zřejmé, že oblast byla vědomě zkontrolována.
 
-## 6. PROJECT.md
+## 7. PROJECT.md
 
 PROJECT.md musí být použitelný jako bootstrap nové konverzace.
 
@@ -99,7 +95,7 @@ Obsahuje alespoň:
 - Critical rules;
 - relevantní detailní docs.
 
-## 7. Storage map
+## 8. Storage map
 
 Explicitně rozhodni, kde budou:
 
@@ -113,7 +109,7 @@ Explicitně rozhodni, kde budou:
 
 Neznámé umístění označ jako TBD. Nevymýšlej fyzickou lokaci.
 
-## 8. Konsoliduj vznik projektu
+## 9. Konsoliduj vznik projektu
 
 Pokud projekt vzniká z aktuální konverzace nebo existujících materiálů, proveď při vytvoření první konsolidaci.
 
@@ -129,7 +125,7 @@ Zachyť:
 
 Nekopíruj chat jako raw transcript.
 
-## 9. Registrace
+## 10. Registrace
 
 Po úspěšném vytvoření přidej projekt do centrálního `projects.yaml`.
 
@@ -142,14 +138,15 @@ Registr musí uvádět minimálně:
 - entrypoint.
 
 Podle potřeby:
-- current_generation;
-- historical_repositories;
+- family;
+- generation;
+- predecessor / successor references;
 - operational;
 - notes.
 
 Do registru nezapisuj projekt, jehož Source of Truth ve skutečnosti neexistuje, pokud není explicitně označen jako planned.
 
-## 10. Bezpečnost
+## 11. Bezpečnost
 
 Nikdy neukládej:
 - API keys;
@@ -160,17 +157,17 @@ Nikdy neukládej:
 
 Při vytváření repository nepovoluj zbytečně širší přístup, než projekt vyžaduje.
 
-## 11. Definition of Done
+## 12. Definition of Done
 
 CREATE PROJECT je hotový pouze pokud:
-1. existuje Project a jeho primary Source of Truth; pokud nové repository čeká na ruční založení uživatelem, operace ještě není plně dokončena;
+1. existuje Repository, které je Source of Truth tohoto Projectu; pokud nové repository čeká na ruční založení uživatelem, operace ještě není plně dokončena;
 2. existuje PROJECT.md;
 3. existuje základní Project Memory;
 4. známá hodnota z dosavadní práce byla zkonsolidována;
 5. projekt je registrován v projects.yaml;
 6. nová AI instance jej dokáže přes registr najít a přes PROJECT.md načíst.
 
-## 12. Report
+## 13. Report
 
 Na konci stručně sděl:
 - co bylo vytvořeno;
