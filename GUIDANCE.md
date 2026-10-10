@@ -44,29 +44,23 @@ Centrální repository `project-memory` není Source of Truth jednotlivých proj
 
 ---
 
-## 3. Project versus Repository
+## 3. Project = Repository
 
-V tomto systému mají pojmy přesný význam:
+Pro účely Project Memory platí záměrně jednoduché pravidlo:
 
-**Project** je logická jednotka dlouhodobé práce: produkt, iniciativa, kniha, výukový systém apod. Project může zahrnovat více repositories, provozní databázi, cloudové služby, produkční soubory a externí assets.
+**1 Project = 1 Git Repository.**
 
-**Repository** je fyzické Git úložiště souborů. Typický Project má jedno hlavní repository, ve kterém žije jeho `PROJECT.md` a kanonická `project-memory/`.
+Repository je fyzický domov projektu a jeho kanonické Markdown paměti. V kořeni repository je `PROJECT.md`; kanonická dlouhodobá paměť je v `project-memory/`.
 
-**GitHub Project** je GitHub nástroj pro plánování práce (board/issues/PRs). Není kontejnerem Project Memory a tento standard jej nevyžaduje.
+Projekt může používat externí systémy, například Supabase, Railway, cloudové storage, produkční nástroje nebo velké assets. Tyto systémy nejsou dalšími Projects jen proto, že patří k témuž produktu.
 
-Základní vztah je:
+Pokud vznikne nová samostatná generace v novém repository, jde v tomto registru o nový Project. Příbuzné Projects lze spojit volitelným polem `family`. Například Business Brief v1, v2, v3 a v4 jsou čtyři Projects/Repositories ve family `business-brief`.
 
-**Project = významová jednotka. Repository = fyzický domov souborů.**
-
-`PROJECT.md` žije v hlavním repository, ale popisuje celý Project, včetně jeho dalších repositories a externích systémů.
-
-Jeden Project může mít více repositories. V takovém případě musí být v centrálním registru a PROJECT.md jasně označeno, které repository je hlavní pro Project Memory a jakou roli mají ostatní.
-
-Historické repositories předchozích generací mohou patřit témuž Projectu, aniž by byla současným Source of Truth.
+GitHub Project (planning board) je jiný pojem. Tento standard jej nevyžaduje a Project Memory v něm nežije.
 
 ---
 
-## 19. Jediný vstup do projektu
+## 4. Jediný vstup do projektu
 
 Každý projekt musí mít právě jeden kanonický vstupní dokument:
 
@@ -88,7 +82,7 @@ README může existovat, ale jeho primární účel je technický nebo veřejný
 
 ---
 
-## 4. Kanonická Project Memory
+## 5. Kanonická Project Memory
 
 Standardní adresář `project-memory/` obsahuje:
 
@@ -184,7 +178,7 @@ Volitelný dokument pro projekty s vlastní terminologií, komponentami, zkratka
 
 ---
 
-## 5. Detailní dokumentace
+## 6. Detailní dokumentace
 
 Adresář `docs/` je volný prostor pro detailní dokumentaci.
 
@@ -202,7 +196,7 @@ Před vytvořením nového Markdown souboru nejdříve zjisti, zda daná znalost
 
 ---
 
-## 6. Markdown versus provozní data
+## 7. Markdown versus provozní data
 
 Markdown odpovídá především na otázky:
 
@@ -225,7 +219,7 @@ Významné provozní zjištění se může stát Decision, Failure nebo Lesson. 
 
 ---
 
-## 7. Typy projektových souborů
+## 8. Typy projektových souborů
 
 Každý projekt má podle potřeby definovat pět vrstev.
 
@@ -258,7 +252,7 @@ Zásada:
 
 ---
 
-## 8. Source of Truth
+## 9. Source of Truth
 
 Pro každý druh informace musí existovat jasný autoritativní zdroj.
 
@@ -279,7 +273,7 @@ Pokud dva dokumenty tvrdí rozdílné věci, nejprve určuj jejich roli a autori
 
 ---
 
-## 9. Pravidla pro AI
+## 10. Pravidla pro AI
 
 Při vstupu do projektu:
 1. přečti PROJECT.md;
@@ -314,7 +308,7 @@ Po významné práci:
 
 ---
 
-## 10. Vytvoření nového projektu
+## 11. Vytvoření nového projektu
 
 Nový projekt zakládej pouze tehdy, když jde skutečně o samostatnou dlouhodobou iniciativu, nikoli o jednorázové téma nebo dílčí úkol existujícího projektu.
 
@@ -330,7 +324,7 @@ Při vytvoření projektu:
 
 ---
 
-## 11. Konsolidace konverzace
+## 12. Konsolidace konverzace
 
 Konverzace není dlouhodobá projektová paměť.
 
@@ -360,9 +354,9 @@ Podrobný postup definuje CONSOLIDATION.md.
 
 ---
 
-## 12. Historie a nové generace projektu
+## 13. Historie a nové generace projektu
 
-Nová verze nebo generace projektu nesmí automaticky zahodit znalost předchozí verze.
+Nová generace vytvořená v novém Repository je nový Project, ale nesmí zahodit znalost předchozí generace.
 
 Při vzniku nové generace:
 - popiš důvod změny;
@@ -372,11 +366,11 @@ Při vzniku nové generace:
 - zachovej provenance historických rozhodnutí;
 - neudržuj starou implementaci jako skrytou code dependency, pokud má být pouze reference.
 
-Nová generace má zdědit znalost, ne nutně starou architekturu.
+Příbuzné generace propojuj polem `family`. Nová generace má zdědit relevantní znalost, ne nutně starou architekturu.
 
 ---
 
-## 13. Central Vault
+## 14. Central Vault
 
 Budoucí Central Vault je projekce, nikoli Source of Truth.
 
@@ -391,7 +385,7 @@ Pravidla:
 
 ---
 
-## 14. Bezpečnost a záloha
+## 15. Bezpečnost a záloha
 
 Logická kopie ve stejném účtu není skutečná bezpečnostní záloha.
 
@@ -404,7 +398,7 @@ Automatizační služby mají dostávat pouze minimální potřebná oprávněn�
 
 ---
 
-## 15. Zásady odvozené z Business Brief v1–v4
+## 16. Zásady odvozené z Business Brief v1–v4
 
 Zkušenost Business Briefu ukázala několik obecných pravidel:
 
@@ -423,7 +417,7 @@ Zkušenost Business Briefu ukázala několik obecných pravidel:
 
 ---
 
-## 16. Nejvyšší pravidlo
+## 17. Nejvyšší pravidlo
 
 Když vznikne nová informace, neptej se nejdříve:
 
@@ -441,7 +435,7 @@ Cílem je, aby nový člověk nebo nová AI instance dokázali rychle obnovit sp
 
 ---
 
-## 17. Standardní operace
+## 18. Standardní operace
 
 Project Memory definuje tři základní operace, které může uživatel vyvolat z libovolné konverzace, pokud má AI přístup k centrálnímu repository a potřebným zdrojovým systémům.
 
@@ -449,7 +443,7 @@ Project Memory definuje tři základní operace, které může uživatel vyvolat
 
 Typický příkaz: **„Vytvoř z tohoto nový projekt.“** nebo **„CREATE PROJECT: <název>“**.
 
-Postupuje podle `CREATE_PROJECT.md`. Ověří, že nejde o část existujícího projektu, vytvoří nebo určí Source of Truth, založí PROJECT.md a Project Memory, zkonsoliduje dosavadní znalost a zaregistruje projekt v projects.yaml. Fyzické akce provádí pouze tehdy, pokud má potřebná oprávnění.
+Postupuje podle `CREATE_PROJECT.md`. Ověří, že nejde o část existujícího projektu, zajistí odpovídající Repository, založí PROJECT.md a Project Memory, zkonsoliduje dosavadní znalost a zaregistruje projekt v projects.yaml. Fyzické akce provádí pouze tehdy, pokud má potřebná oprávnění.
 
 ### LOAD PROJECT
 
@@ -467,7 +461,7 @@ Tyto operace tvoří standardní rozhraní Project Memory. Nová konverzace nem�
 
 ---
 
-## 18. Životní cyklus
+## 19. Životní cyklus
 
 Základní cyklus práce:
 
