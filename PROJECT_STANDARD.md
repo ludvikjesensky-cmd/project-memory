@@ -4,19 +4,19 @@
 **Version:** 1.0  
 **Purpose:** Formální standard dlouhodobé paměti každého projektu.
 
-## 1. Project a Repository
+## 1. Project = Repository
 
-Project je logická jednotka dlouhodobé práce. Repository je fyzické Git úložiště.
+Pro tento standard platí:
 
-Typický Project má jedno **primary repository**. V jeho kořeni žije `PROJECT.md` a v něm také kanonická `project-memory/`.
+**1 Project = 1 Git Repository.**
 
-PROJECT.md popisuje celý Project, nikoli pouze obsah repository. Musí tedy umět odkázat i na další repositories, Supabase, Railway, produkční soubory, externí assets a další systémy.
+V kořeni Repository žije `PROJECT.md` a kanonická `project-memory/`. Project může odkazovat na externí provozní a produkční systémy, ale nemá více Git repositories uvnitř jedné projektové identity.
 
-Jeden Project může mít více repositories. Právě jedno má být označeno jako primary memory repository, pokud není explicitně zdokumentována jiná architektura.
+Pokud nová generace dostane nové Repository, je to nový Project. Příbuznost s předchozími generacemi se vyjádří přes `family`, HISTORY a odkazy na předchozí Projects.
 
-GitHub Project (planning board) není součástí tohoto standardu a nesmí být zaměňován s Projectem v Project Memory.
+GitHub Project planning board není Project ve smyslu tohoto standardu.
 
-## 17. Povinný vstup
+## 2. Povinný vstup
 
 Každý dlouhodobý projekt musí mít v kořeni `PROJECT.md`.
 
@@ -33,7 +33,7 @@ Musí obsahovat alespoň:
 - kritická pravidla a zákazy;
 - odkazy na relevantní detailní dokumentaci.
 
-## 2. Kanonická struktura
+## 3. Kanonická struktura
 
 Doporučené minimum:
 
@@ -54,7 +54,7 @@ Volitelně:
 
 Detailní dokumentace patří do `docs/` nebo jiné jasně pojmenované projektové vrstvy.
 
-## 3. Jedna odpovědnost, jeden kanonický domov
+## 4. Jedna odpovědnost, jeden kanonický domov
 
 - Definice a hranice → SCOPE
 - Současnost → CURRENT_STATE
@@ -69,7 +69,7 @@ Detailní dokumentace patří do `docs/` nebo jiné jasně pojmenované projekto
 
 Nevytvářej paralelní kanonické soubory stejné odpovědnosti.
 
-## 4. CURRENT_STATE
+## 5. CURRENT_STATE
 
 CURRENT_STATE je přepisovaný snapshot, nikoli append-only log.
 
@@ -86,7 +86,7 @@ Historické informace se z něj průběžně odstraňují a podle významu přes
 
 Datované `PROGRESS_*.md`, nové HANDOFF soubory nebo alternativní STATUS soubory se nemají používat jako náhrada CURRENT_STATE.
 
-## 5. DECISIONS
+## 6. DECISIONS
 
 Každé významné rozhodnutí má doporučeně:
 - ID, například D001;
@@ -100,7 +100,7 @@ Každé významné rozhodnutí má doporučeně:
 
 Experiment není automaticky rozhodnutí. Rozhodnutí musí být vědomě přijato.
 
-## 6. FAILURES
+## 7. FAILURES
 
 Failure záznam má doporučeně:
 - ID, například F001;
@@ -115,7 +115,7 @@ Failure záznam má doporučeně:
 
 Neúspěšný přístup nemaž jen proto, že už není v kódu. Historie slepé cesty chrání budoucí práci.
 
-## 7. LESSONS
+## 8. LESSONS
 
 Lesson má zachytit zobecnitelné poznání, ne pouze popis incidentu.
 
@@ -125,7 +125,7 @@ Doporučeně:
 - princip;
 - praktický dopad na budoucí práci.
 
-## 8. HISTORY
+## 9. HISTORY
 
 HISTORY zaznamenává pouze významné milníky, generace a pivoty.
 
@@ -139,7 +139,7 @@ U nové generace vždy zachyť:
 
 Git commit history nenahrazuje projektovou historii a projektová historie nemá opisovat commity.
 
-## 9. OPEN_QUESTIONS
+## 10. OPEN_QUESTIONS
 
 Každá otevřená otázka má mít:
 - ID;
@@ -151,7 +151,7 @@ Každá otevřená otázka má mít:
 
 Po vyřešení se závěr podle povahy přesune do DECISIONS a otázka se označí RESOLVED nebo odstraní z aktivního seznamu s odkazem na rozhodnutí.
 
-## 10. ARCHITECTURE
+## 11. ARCHITECTURE
 
 ARCHITECTURE popisuje pouze současný platný systém:
 - hlavní komponenty;
@@ -164,7 +164,7 @@ ARCHITECTURE popisuje pouze současný platný systém:
 
 Historické varianty patří do HISTORY/DECISIONS/FAILURES.
 
-## 11. SCOPE
+## 12. SCOPE
 
 SCOPE chrání projekt před postupným rozpliznutím.
 
@@ -176,7 +176,7 @@ Má definovat:
 - hranice;
 - základní produktové principy.
 
-## 12. Storage model
+## 13. Storage model
 
 Každý projekt podle potřeby explicitně mapuje:
 
@@ -184,7 +184,7 @@ Každý projekt podle potřeby explicitně mapuje:
 **SOURCE** — editovatelný zdroj produktu.  
 **PRODUCTION** — pracovní nativní soubory nástrojů.  
 **ARTIFACTS** — výsledné release/export soubory.  
-**EXTERNAL** — data a služby mimo hlavní repository.
+**EXTERNAL** — data a služby mimo Repository.
 
 Git je primární pro text, kód a znalost. Velké nebo často měněné binární soubory se ukládají do Git pouze tehdy, když to dává provozní smysl. Pro velké binární zdroje lze použít Git LFS nebo externí storage. Významné výsledky mají mít explicitní release/version identitu.
 
@@ -195,13 +195,13 @@ U publikací je doporučený princip:
 
 Pokud se po sazbě opraví obsah, změna se má podle možností promítnout zpět do content masteru, aby nevznikly dvě divergentní pravdy.
 
-## 13. Operational state
+## 14. Operational state
 
 Raw logy, joby, retry, telemetry, usage a runtime eventy nepatří do Project Memory.
 
 Pokud existuje Supabase/Postgres nebo jiný provozní systém, je autoritativní pro skutečný běh systému. Markdown pouze vysvětluje význam, umístění a dlouhodobé závěry.
 
-## 14. Čtení projektu AI
+## 15. Čtení projektu AI
 
 Default:
 1. PROJECT
@@ -222,7 +222,7 @@ Detailní docs čti selektivně podle mapy v PROJECT.md.
 
 Nečti automaticky celé repository, pokud to není potřeba.
 
-## 15. Údržba
+## 16. Údržba
 
 Po významné práci proveď konsolidaci.
 
@@ -230,7 +230,7 @@ Nezakládej nový Markdown proto, že je pohodlnější něco odložit do novéh
 
 Kanonická Project Memory má být malá, čitelná a aktuální. Detail může růst v docs a provozních systémech.
 
-## 16. Kvalitativní test
+## 17. Kvalitativní test
 
 Projekt splňuje standard, pokud nová AI instance bez staré konverzace dokáže po přečtení PROJECT.md a relevantní Project Memory správně odpovědět:
 
