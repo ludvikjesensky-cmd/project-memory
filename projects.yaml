@@ -2,6 +2,8 @@ version: 1
 registry: project-memory
 guidance: GUIDANCE.md
 standard: PROJECT_STANDARD.md
+create_project: CREATE_PROJECT.md
+load_project: LOAD_PROJECT.md
 consolidation: CONSOLIDATION.md
 
 # Central registry of long-lived projects.
