@@ -29,7 +29,23 @@ Před vytvořením vždy přečti `projects.yaml` a ověř, zda projekt nebo jeh
 
 Pokud jde pouze o úkol, experiment, dokument nebo dílčí workstream existujícího projektu, nevytvářej nové repository automaticky.
 
-## 3. Urči identitu
+## 3. Urči Project a Repository
+
+Nejdříve vytvoř logickou identitu Projectu. Potom urč jeho fyzický domov.
+
+Standardně platí:
+
+**CREATE PROJECT → zajisti primary repository → inicializuj Project Memory v repository → zaregistruj Project.**
+
+Project není GitHub Project board. Repository není Project. Repository je pouze jeden z fyzických zdrojů Projectu.
+
+Pokud nový Project potřebuje nové GitHub repository a aktuální GitHub konektor neumí repository fyzicky vytvořit, vyžádej pouze tento jeden ruční krok od uživatele: založení prázdného repository se sjednaným názvem. Jakmile repository existuje, pokračuj automaticky vytvořením všech potřebných souborů a registrací.
+
+Pokud Project používá existující repository, nové nevytvářej.
+
+Jeden Project může mít více repositories. Urči primary repository pro PROJECT.md a Project Memory a role ostatních repositories popiš v PROJECT.md a registru.
+
+## 4. Identita
 
 Stanov:
 - lidský název;
@@ -41,11 +57,11 @@ Stanov:
 
 Preferuj krátké stabilní názvy. Verzi produktu nevkládej do názvu repository, pokud nejde skutečně o oddělenou generaci vyžadující samostatný Source of Truth.
 
-## 4. Vytvoř Source of Truth
+## 13. Zajisti Repository a Source of Truth
 
-Pokud má AI v aktuální konverzaci oprávnění vytvořit GitHub repository a GitHub je zvolený Source of Truth, vytvoř jej.
+Pokud dostupný GitHub konektor podporuje vytvoření repository a má potřebná oprávnění, může jej AI vytvořit. Pokud tuto schopnost nepodporuje, repository musí fyzicky založit uživatel. AI nesmí tvrdit, že repository vytvořila.
 
-Pokud oprávnění chybí, nevydávej vytvoření za hotové. Připrav strukturu a jasně řekni, který fyzický krok musí provést uživatel.
+Po založení repository AI ověří jeho existenci a pokračuje inicializací souborů. V aktuálně používaném GitHub konektoru je vytváření a úprava souborů v existujících repositories podporována, ale vytvoření nového repository nemusí být dostupné; schopnost se má vždy ověřit podle aktuálních nástrojů.
 
 Nevytvářej paralelní repository, pokud už existuje vhodný Source of Truth.
 
@@ -147,7 +163,7 @@ Při vytváření repository nepovoluj zbytečně širší přístup, než proje
 ## 11. Definition of Done
 
 CREATE PROJECT je hotový pouze pokud:
-1. existuje Source of Truth nebo je explicitně označeno, že fyzické vytvoření čeká na uživatele;
+1. existuje Project a jeho primary Source of Truth; pokud nové repository čeká na ruční založení uživatelem, operace ještě není plně dokončena;
 2. existuje PROJECT.md;
 3. existuje základní Project Memory;
 4. známá hodnota z dosavadní práce byla zkonsolidována;
