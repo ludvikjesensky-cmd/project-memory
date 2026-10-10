@@ -116,11 +116,12 @@ Nový projekt vytvoř pouze pokud:
 - zaslouží vlastní Project Memory.
 
 Pokud ano:
-1. vytvoř/zvol Source of Truth;
+1. zajisti samostatné Repository; Repository je nový Project;
 2. vytvoř PROJECT.md;
 3. inicializuj project-memory podle PROJECT_STANDARD;
 4. zaregistruj projekt v projects.yaml;
-5. urč storage vrstvy a případný operational Source of Truth.
+5. urč storage vrstvy a případný operational Source of Truth;
+6. pokud jde o novou generaci existujícího produktu, nastav `family` a zachyť dědictví.
 
 Pokud ne, informace začleň do existujícího projektu nebo ji neukládej.
 
