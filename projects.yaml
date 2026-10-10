@@ -61,7 +61,8 @@ projects:
       note: Runtime state, queues, runs, artifacts and logs belong in the operational data plane; verify identifiers from PROJECT.md/project memory.
     notes:
       - Current active generation.
-      - Before repeating older approaches, read inherited failures and history once Project Memory migration is complete.
+      - Project Memory standard migration completed 2026-10-10.
+      - Before repeating older approaches, read project-memory/FAILURES.md and project-memory/HISTORY.md.
 
   - id: school-vdf
     name: School / VDF
