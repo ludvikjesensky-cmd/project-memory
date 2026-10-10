@@ -44,7 +44,29 @@ Centrální repository `project-memory` není Source of Truth jednotlivých proj
 
 ---
 
-## 3. Jediný vstup do projektu
+## 3. Project versus Repository
+
+V tomto systému mají pojmy přesný význam:
+
+**Project** je logická jednotka dlouhodobé práce: produkt, iniciativa, kniha, výukový systém apod. Project může zahrnovat více repositories, provozní databázi, cloudové služby, produkční soubory a externí assets.
+
+**Repository** je fyzické Git úložiště souborů. Typický Project má jedno hlavní repository, ve kterém žije jeho `PROJECT.md` a kanonická `project-memory/`.
+
+**GitHub Project** je GitHub nástroj pro plánování práce (board/issues/PRs). Není kontejnerem Project Memory a tento standard jej nevyžaduje.
+
+Základní vztah je:
+
+**Project = významová jednotka. Repository = fyzický domov souborů.**
+
+`PROJECT.md` žije v hlavním repository, ale popisuje celý Project, včetně jeho dalších repositories a externích systémů.
+
+Jeden Project může mít více repositories. V takovém případě musí být v centrálním registru a PROJECT.md jasně označeno, které repository je hlavní pro Project Memory a jakou roli mají ostatní.
+
+Historické repositories předchozích generací mohou patřit témuž Projectu, aniž by byla současným Source of Truth.
+
+---
+
+## 19. Jediný vstup do projektu
 
 Každý projekt musí mít právě jeden kanonický vstupní dokument:
 
