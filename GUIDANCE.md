@@ -28,6 +28,8 @@ Project Memory není archiv všeho. Je to udržovaná, autoritativní znalost pr
 Centrální vrstva:
 - `GUIDANCE.md` — tato pravidla;
 - `PROJECT_STANDARD.md` — formální standard struktury projektu;
+- `CREATE_PROJECT.md` — protokol založení nového projektu;
+- `LOAD_PROJECT.md` — protokol načtení projektu do nové konverzace;
 - `CONSOLIDATION.md` — postup konsolidace konverzace;
 - `projects.yaml` — strojově čitelný registr projektů.
 
@@ -417,13 +419,40 @@ Cílem je, aby nový člověk nebo nová AI instance dokázali rychle obnovit sp
 
 ---
 
-## 17. Životní cyklus
+## 17. Standardní operace
+
+Project Memory definuje tři základní operace, které může uživatel vyvolat z libovolné konverzace, pokud má AI přístup k centrálnímu repository a potřebným zdrojovým systémům.
+
+### CREATE PROJECT
+
+Typický příkaz: **„Vytvoř z tohoto nový projekt.“** nebo **„CREATE PROJECT: <název>“**.
+
+Postupuje podle `CREATE_PROJECT.md`. Ověří, že nejde o část existujícího projektu, vytvoří nebo určí Source of Truth, založí PROJECT.md a Project Memory, zkonsoliduje dosavadní znalost a zaregistruje projekt v projects.yaml. Fyzické akce provádí pouze tehdy, pokud má potřebná oprávnění.
+
+### LOAD PROJECT
+
+Typický příkaz: **„LOAD PROJECT: <název>“** nebo **„Načti <projekt> a pokračujme.“**.
+
+Postupuje podle `LOAD_PROJECT.md`. Najde projekt přes projects.yaml, otevře jeho PROJECT.md a načte pouze relevantní kanonickou paměť. Pokud úkol závisí na živém stavu, ověří operational Source of Truth.
+
+### CONSOLIDATE
+
+Typický příkaz: **„Udělej konsolidaci této konverzace.“**.
+
+Postupuje podle `CONSOLIDATION.md`. Destiluje trvalou hodnotu z práce do správných kanonických dokumentů a podle potřeby aktualizuje registr.
+
+Tyto operace tvoří standardní rozhraní Project Memory. Nová konverzace nemá vymýšlet vlastní paralelní workflow, pokud některá z těchto operací odpovídá požadovanému cíli.
+
+---
+
+## 18. Životní cyklus
 
 Základní cyklus práce:
 
-**READ → WORK → LEARN → CONSOLIDATE → READ**
+**CREATE → LOAD → WORK → LEARN → CONSOLIDATE → LOAD → WORK ...**
 
-Nejdříve načti existující znalost.  
+Nový dlouhodobý projekt nejprve vytvoř podle CREATE PROJECT.  
+Existující projekt načti podle LOAD PROJECT.  
 Potom pracuj.  
 Z práce vytěž rozhodnutí, failures a lessons.  
 Konsoliduj je do Project Memory.  
