@@ -1,0 +1,42 @@
+version: 1
+registry: project-memory
+guidance: GUIDANCE.md
+standard: PROJECT_STANDARD.md
+consolidation: CONSOLIDATION.md
+
+# Central registry of long-lived projects.
+# A project is registered only when its source of truth can be identified.
+# Add repositories/storage locations rather than inventing placeholders.
+
+projects:
+  - id: business-brief
+    name: Business Brief
+    status: active
+    current_generation: v4
+    source_of_truth:
+      type: github
+      repository: ludvikjesensky-cmd/business-brief-v4
+      entrypoint: PROJECT.md
+    historical_repositories:
+      - ludvikjesensky-cmd/business-brief
+      - ludvikjesensky-cmd/business-brief-v2
+      - ludvikjesensky-cmd/business-brief-v3
+    operational:
+      type: supabase
+      note: Runtime state, queues, runs, artifacts and logs belong in the project's operational data plane; verify current identifiers from PROJECT.md/project memory.
+    notes:
+      - Historical generations are references and sources of lessons, not current code dependencies.
+      - Do not repeat failed v3/v4 approaches without reading project-memory/FAILURES.md once migrated to the standard.
+
+  - id: school-vdf
+    name: School / VDF
+    status: active
+    source_of_truth:
+      type: github
+      repository: ludvikjesensky-cmd/skola-vdf
+      entrypoint: PROJECT.md
+    notes:
+      - Repository is known; Project Memory standardization still needs to be applied.
+
+# Register additional long-lived projects only after their actual Source of Truth
+# (repository, storage, or other canonical location) has been verified.
