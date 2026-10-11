@@ -85,7 +85,7 @@ projects:
     notes:
       - Project Memory initialized 2026-10-11 under CREATE_PROJECT.
       - Literary book; editable manuscript sources live in texts/.
-      - Six historical working texts imported with provenance; final outline and manuscript selection remain open.
+      - Historical drafts, variants and fragments organized by chapter in texts/; provenance in docs/SOURCE_CATALOG.md. Final outline and manuscript selection remain open.
       - Current editorial state is project-memory/CURRENT_STATE.md; no operational database.
 
 # Register additional long-lived projects only after their actual Repository
