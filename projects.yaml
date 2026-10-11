@@ -84,7 +84,7 @@ projects:
       entrypoint: PROJECT.md
     notes:
       - Project Memory initialized 2026-10-11 under CREATE_PROJECT.
-      - Literary book; editable manuscript sources live in source/manuscript/.
+      - Literary book; editable manuscript sources live in texts/.
       - Six historical working texts imported with provenance; final outline and manuscript selection remain open.
       - Current editorial state is project-memory/CURRENT_STATE.md; no operational database.
 
