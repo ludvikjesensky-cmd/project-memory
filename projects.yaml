@@ -75,5 +75,18 @@ projects:
       - Repository ownership/path must be verified before relying on this registry entry.
       - Project Memory standardization still needs to be applied.
 
+  - id: book-neni-to-tvoje-vina
+    name: Není to tvoje vina
+    status: active
+    source_of_truth:
+      type: github
+      repository: ludvikjesensky-cmd/book-neni-to-tvoje-vina
+      entrypoint: PROJECT.md
+    notes:
+      - Project Memory initialized 2026-10-11 under CREATE_PROJECT.
+      - Literary book; editable manuscript sources live in source/manuscript/.
+      - Six historical working texts imported with provenance; final outline and manuscript selection remain open.
+      - Current editorial state is project-memory/CURRENT_STATE.md; no operational database.
+
 # Register additional long-lived projects only after their actual Repository
 # (or explicitly supported non-Git source of truth) has been verified.
