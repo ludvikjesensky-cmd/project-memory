@@ -88,5 +88,21 @@ projects:
       - Historical drafts, variants and fragments organized by chapter in texts/; provenance in docs/SOURCE_CATALOG.md. Final outline and manuscript selection remain open.
       - Current editorial state is project-memory/CURRENT_STATE.md; no operational database.
 
+
+  - id: ancient-texts
+    name: Ancient Texts
+    status: active
+    source_of_truth:
+      type: github
+      repository: ludvikjesensky-cmd/ancient-texts
+      entrypoint: PROJECT.md
+    notes:
+      - Long-term literary/editorial project focused on the oldest written texts and human questions.
+      - Primary language is Czech; English expansion is possible later.
+      - First GREAT TEXTS pilot: Atra Chasís.
+      - First GREAT QUESTIONS pilot: The Flood.
+      - Project Memory initialized and first full consolidation completed 2026-10-19.
+      - No operational database; GitHub is the project Source of Truth.
+
 # Register additional long-lived projects only after their actual Repository
 # (or explicitly supported non-Git source of truth) has been verified.
