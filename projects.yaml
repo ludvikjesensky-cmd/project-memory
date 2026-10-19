@@ -104,5 +104,21 @@ projects:
       - Project Memory initialized and first full consolidation completed 2026-10-19.
       - No operational database; GitHub is the project Source of Truth.
 
+
+  - id: book-atrachasis
+    name: Atrachasís
+    family: ancient-texts
+    status: active
+    source_of_truth:
+      type: github
+      repository: ludvikjesensky-cmd/book-atrachasis
+      entrypoint: PROJECT.md
+    notes:
+      - GREAT TEXTS monograph derived from the Ancient Texts umbrella methodology.
+      - Project Memory initialized 2026-10-19 under CREATE_PROJECT.
+      - Current phase: witness census and source foundation.
+      - Owns the Atrachasís witness corpus, artifact dossiers, cuneiform/sign-level source, critical text, Czech translation, literary rendering and future manuscript.
+      - No operational database; GitHub is the project Source of Truth.
+
 # Register additional long-lived projects only after their actual Repository
 # (or explicitly supported non-Git source of truth) has been verified.
