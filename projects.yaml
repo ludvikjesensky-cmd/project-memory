@@ -75,19 +75,18 @@ projects:
       - Repository ownership/path must be verified before relying on this registry entry.
       - Project Memory standardization still needs to be applied.
 
-  - id: book-neni-to-tvoje-vina
+  - id: book-neni-toje-vina
     name: Není to tvoje vina
     status: active
     source_of_truth:
       type: github
-      repository: ludvikjesensky-cmd/book-neni-to-tvoje-vina
+      repository: ludvikjesensky-cmd/book-neni-toje-vina
       entrypoint: PROJECT.md
     notes:
       - Project Memory initialized 2026-10-11 under CREATE_PROJECT.
       - Literary book; editable manuscript sources live in texts/.
       - Historical drafts, variants and fragments organized by chapter in texts/; provenance in docs/SOURCE_CATALOG.md. Final outline and manuscript selection remain open.
       - Current editorial state is project-memory/CURRENT_STATE.md; no operational database.
-
 
   - id: ancient-texts
     name: Ancient Texts
@@ -104,7 +103,6 @@ projects:
       - Project Memory initialized and first full consolidation completed 2026-10-19.
       - No operational database; GitHub is the project Source of Truth.
 
-
   - id: book-atrachasis
     name: Atrachasís
     family: ancient-texts
@@ -120,9 +118,6 @@ projects:
       - Owns the Atrachasís witness corpus, artifact dossiers, cuneiform/sign-level source, critical text, Czech translation, literary rendering and future manuscript.
       - No operational database; GitHub is the project Source of Truth.
 
-# Register additional long-lived projects only after their actual Repository
-# (or explicitly supported non-Git source of truth) has been verified.
-
   - id: slovo-mluvene-v1
     name: Slovo mluvené v1
     family: spoken-word-archive
@@ -134,8 +129,10 @@ projects:
       entrypoint: PROJECT.md
     operational:
       type: supabase
-      note: Planned catalogue, family authentication, and playback progress; project not provisioned yet.
+      project_ref: vqbpmfiwpellcmzajsit
+      organization: Hobby
+      note: Free project for family authentication, catalogue metadata and playback progress; project is active in eu-central-1.
     notes:
       - Private family audio archive, approximately 2 TB.
       - Audio planned for private Hetzner Object Storage; app planned for Hetzner server.
-      - Initial project memory and responsive UI scaffold created 2026-11-09.
+      - Initial project memory, responsive UI scaffold, and RLS-protected schema created 2026-11-09.
