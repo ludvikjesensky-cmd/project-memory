@@ -122,3 +122,20 @@ projects:
 
 # Register additional long-lived projects only after their actual Repository
 # (or explicitly supported non-Git source of truth) has been verified.
+
+  - id: slovo-mluvene-v1
+    name: Slovo mluvené v1
+    family: spoken-word-archive
+    generation: v1
+    status: active
+    source_of_truth:
+      type: github
+      repository: ludvikjesensky-cmd/slovo-mluvene-v1
+      entrypoint: PROJECT.md
+    operational:
+      type: supabase
+      note: Planned catalogue, family authentication, and playback progress; project not provisioned yet.
+    notes:
+      - Private family audio archive, approximately 2 TB.
+      - Audio planned for private Hetzner Object Storage; app planned for Hetzner server.
+      - Initial project memory and responsive UI scaffold created 2026-11-09.
