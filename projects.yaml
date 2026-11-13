@@ -136,3 +136,16 @@ projects:
       - Private family audio archive, approximately 2 TB.
       - Audio planned for private Hetzner Object Storage; app planned for Hetzner server.
       - Initial project memory, responsive UI scaffold, and RLS-protected schema created 2026-11-09.
+
+  - id: tannenberg
+    name: Tannenberg
+    status: active
+    source_of_truth:
+      type: github
+      repository: ludvikjesensky-cmd/tannenberg
+      entrypoint: PROJECT.md
+    notes:
+      - Private publishing-house repository initialized and consolidated 2026-11-13.
+      - Strategic focus: original books, curated public-domain classics, Czech and multilingual literary translations, print-on-demand, autonomous agent workflows, and multimedia community commerce.
+      - Current phase is conceptual/research; operational production, distribution, agents and legal company setup are not yet verified.
+      - Related book repositories retain their own separate Sources of Truth.
