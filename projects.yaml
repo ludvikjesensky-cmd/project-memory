@@ -149,3 +149,16 @@ projects:
       - Strategic focus: original books, curated public-domain classics, Czech and multilingual literary translations, print-on-demand, autonomous agent workflows, and multimedia community commerce.
       - Current phase is conceptual/research; operational production, distribution, agents and legal company setup are not yet verified.
       - Related book repositories retain their own separate Sources of Truth.
+
+  - id: palme-institut
+    name: PALME Institut
+    status: active
+    source_of_truth:
+      type: github
+      repository: lkostak/palme-institut
+      entrypoint: PROJECT.md
+    notes:
+      - Long-term research, cultural-memory, and editorial initiative for the Czech-German borderlands.
+      - Canonical Project Memory consolidated 2026-11-14 in project-memory/; detailed research, history and provenance in docs/; secondary source in archives/.
+      - Current phase: concept and research preparation. Legal institution, live research platform, funding, publications, and operational runtime are not independently verified.
+      - Tannenberg remains a separate commercial publishing project and Source of Truth.
