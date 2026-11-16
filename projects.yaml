@@ -150,7 +150,28 @@ projects:
       - Current phase is conceptual/research; operational production, distribution, agents and legal company setup are not yet verified.
       - Related book repositories retain their own separate Sources of Truth.
 
+  - id: palme-pilot
+    name: PALME Pilot
+    family: palme
+    status: active
+    source_of_truth:
+      type: github
+      repository: lkostak/palme-pilot
+      entrypoint: PROJECT.md
+    operational:
+      type: supabase
+      project_ref: wqliuuinocvnucyopunk
+      organization: PALME
+      note: PostgreSQL/RLS, OCR and editorial source ledger, private storage buckets and pgvector schema; actual embeddings not yet generated.
+    notes:
+      - Technical archive and web pilot for the historical newspaper Nordböhmisches Volks-Blatt, probe issue 1873-10-04, six physical pages.
+      - Railway project palme-pilot, production service palme-web; verified deployed 2026-11-16.
+      - Own narrow technical Project Memory; all institutional editorial and historical-methodology decisions remain canonical in lkostak/palme-institut.
+      - Original PDF and OCR in GitHub checkout, initial image access is session-protected; no verified full object transfer or approved critical publication.
+      - Never store credentials, preview password or session secrets in Project Memory.
+
   - id: palme-institut
+    family: palme
     name: PALME Institut
     status: active
     source_of_truth:
@@ -160,5 +181,5 @@ projects:
     notes:
       - Long-term research, cultural-memory, and editorial initiative for the Czech-German borderlands.
       - Canonical Project Memory consolidated 2026-11-14 in project-memory/; detailed research, history and provenance in docs/; secondary source in archives/.
-      - Current phase: concept and research preparation. Legal institution, live research platform, funding, publications, and operational runtime are not independently verified.
+      - Institution and research strategy remain conceptual; a related technical archive pilot is deployed and independently linked as palme-pilot, while legal institution, funding, rights and approved publications remain unverified.
       - Tannenberg remains a separate commercial publishing project and Source of Truth.
