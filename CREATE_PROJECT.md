@@ -179,3 +179,7 @@ Na konci stručně sděl:
 ## 14. Volitelná integrace workflow
 
 Pokud nový projekt již má definovaný opakovatelný proces nebo jej chce zpřístupnit Kanceláři, vytvoř v kořeni `WORKFLOW.md` podle centrálního `WORKFLOW_TEMPLATE.md` a přidej odkaz do `PROJECT.md`. Neznámé provozní umístění označ TBD; nevymýšlej tabulky ani připojení. Pokud projekt workflow zatím nemá, soubor nevytvářej jen kvůli šabloně. Přítomnost souboru neznamená, že je integrace již funkční.
+
+## 15. Volitelná integrace úkolů
+
+Pokud projekt používá samostatnou evidenci úkolů a chce je zobrazovat v Kanceláři, vytvoř kořenový `TASKS.md` podle centrálního `TASKS_TEMPLATE.md` a přidej odkaz do `PROJECT.md`. Uveď jen ověřené umístění a skutečné názvy polí; ostatní označ `TBD`. Nezakládej databázové tabulky ani soubor TASKS.md automaticky, pokud je projekt nepotřebuje. Živý seznam úkolů se do Markdownu nekopíruje.
