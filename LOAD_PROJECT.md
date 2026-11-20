@@ -90,3 +90,7 @@ LOAD neznamená „načti všechno“. Znamená „načti správnou autoritativn
 ## 8. Workflow pro Kancelář
 
 Pokud uživatel řeší procesy, jejich fáze nebo zobrazení v Kanceláři, otevři volitelný kořenový `WORKFLOW.md` uvedený v `PROJECT.md`. Z něj čti definici procesu a mapování zdrojů; skutečný stav instancí ověřuj v provozním Source of Truth. Pokud připojení neexistuje nebo není dostupné, jasně to uveď. Pro běžnou práci bez workflow tento dokument nenačítej automaticky.
+
+## 9. Úkoly pro Kancelář
+
+Pokud se úkol týká přehledu projektových úkolů nebo Kanceláře, načti volitelný `TASKS.md` uvedený v `PROJECT.md`. Z dokumentu zjisti, odkud a jak úkoly číst; jejich skutečný stav ověř v uvedeném autoritativním systému. Nedostupné nebo neověřené připojení výslovně označ. Pro běžné načtení projektu bez práce s úkoly TASKS.md nevyžaduj.
