@@ -261,3 +261,15 @@ Projekt, který má opakovatelné pracovní procesy a chce jejich průběh zobra
 - Projekt bez workflow nemusí WORKFLOW.md vytvářet.
 
 Pro první verzi stačí lineární workflow. Složitější procesy lze později rozšířit bez změny základní odpovědnosti dokumentu.
+
+## 19. Volitelný TASKS.md a Kancelář
+
+Projekt, jehož úkoly má Kancelář zobrazovat, může mít v kořeni `TASKS.md` podle centrálního `TASKS_TEMPLATE.md`. Soubor je mapou dat, nikoli seznamem aktuálních úkolů. Nejde o povinný dokument kanonické Project Memory.
+
+- `PROJECT.md` odkazuje na TASKS.md, pokud existuje.
+- TASKS.md určuje autoritativní systém úkolů, stabilní identifikátory, zdroj dat a mapování základních polí (ID, název, stav, vlastník, priorita, termín, vazba na pracovní objekt nebo workflow).
+- Živé úkoly a jejich změny zůstávají v projektovém provozním systému, např. Supabase. Nedělej z Markdownu konkurenční evidenci.
+- Kancelář může samostatně spravovat osobní a nadprojektové úkoly; každý úkol má právě jeden autoritativní systém.
+- Neověřené tabulky, pole nebo připojení označ `TBD`; jejich existenci nepředpokládej.
+- Žádné credentials v Markdownu. Čtení přes autorizovaný serverový adaptér a bezpečnou referenci připojení. Samotný TASKS.md neuděluje právo úkoly měnit.
+- Pokud projekt úkolovou evidenci nemá nebo ji nechce integrovat, TASKS.md není potřeba.
