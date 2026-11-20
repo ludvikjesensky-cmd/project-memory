@@ -86,3 +86,7 @@ Stačí být připraven pokračovat. Pokud je užitečné shrnutí, uveď struč
 LOAD je hotový, když AI zná dostatek kanonického kontextu pro konkrétní práci a ví, kde ověřit další potřebné skutečnosti.
 
 LOAD neznamená „načti všechno“. Znamená „načti správnou autoritativní znalost pro tuto práci“.
+
+## 8. Workflow pro Kancelář
+
+Pokud uživatel řeší procesy, jejich fáze nebo zobrazení v Kanceláři, otevři volitelný kořenový `WORKFLOW.md` uvedený v `PROJECT.md`. Z něj čti definici procesu a mapování zdrojů; skutečný stav instancí ověřuj v provozním Source of Truth. Pokud připojení neexistuje nebo není dostupné, jasně to uveď. Pro běžnou práci bez workflow tento dokument nenačítej automaticky.
