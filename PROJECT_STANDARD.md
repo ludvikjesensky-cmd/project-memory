@@ -244,3 +244,20 @@ Projekt splňuje standard, pokud nová AI instance bez staré konverzace dokáž
 - Co mám udělat dál?
 
 Pokud ne, Project Memory není dostatečně konsolidovaná.
+
+## 18. Volitelný WORKFLOW.md a Kancelář
+
+Projekt, který má opakovatelné pracovní procesy a chce jejich průběh zobrazovat v Kanceláři, může v kořeni repository vytvořit `WORKFLOW.md`. Nejde o devátý povinný dokument kanonické paměti. Je to jediná vstupní mapa definic workflow a jejich provozních zdrojů; vzor je v centrálním `WORKFLOW_TEMPLATE.md`.
+
+- `PROJECT.md` na WORKFLOW.md odkazuje, pokud existuje.
+- `WORKFLOW.md` popisuje ID a účel workflow, uspořádané kroky (včetně větvení či závislostí, pokud existují), a způsob načtení stavu jednotlivých instancí a kroků.
+- `CURRENT_STATE.md` nadále popisuje ověřený stav vývoje projektu, nikoli stav každého běhu workflow.
+- Autoritativní stavy běhů a kroků zůstávají v provozním systému (např. Supabase), nikdy se ručně neduplikují do Markdownu.
+- Kancelář čte strojově interpretovatelný YAML blok v WORKFLOW.md a provozní stav získává prostřednictvím autorizovaného serverového přístupu/adaptéru. Markdown sám není přístupovým oprávněním ani spustitelným dotazem.
+- YAML uvádí stabilní identifikátory, zdroj, názvy tabulek nebo pohledů, mapování identifikátorů a stavů. Uváděj pouze skutečně ověřená umístění; neznámá pole označ `TBD` a nepředstírej funkční integraci.
+- Žádná hesla, klíče, tokeny, connection strings ani neveřejné osobní údaje do WORKFLOW.md nepatří. Pro klienta Kanceláře se neposkytují databázové přihlašovací údaje.
+- Kancelář musí umět zobrazit stav „nepřipojeno / nelze ověřit“, nikoli vydávat popsaný proces za živě sledovaný.
+- Ovládací operace (start, stop, approve apod.) nejsou tímto dokumentem automaticky povoleny. Jejich zavedení vyžaduje samostatný bezpečný kontrakt a autorizaci na straně projektu.
+- Projekt bez workflow nemusí WORKFLOW.md vytvářet.
+
+Pro první verzi stačí lineární workflow. Složitější procesy lze později rozšířit bez změny základní odpovědnosti dokumentu.
