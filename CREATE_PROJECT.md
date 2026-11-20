@@ -175,3 +175,7 @@ Na konci stručně sděl:
 - co bylo zkonsolidováno;
 - co zůstalo TBD nebo OPEN;
 - zda je potřeba nějaký fyzický krok uživatele.
+
+## 14. Volitelná integrace workflow
+
+Pokud nový projekt již má definovaný opakovatelný proces nebo jej chce zpřístupnit Kanceláři, vytvoř v kořeni `WORKFLOW.md` podle centrálního `WORKFLOW_TEMPLATE.md` a přidej odkaz do `PROJECT.md`. Neznámé provozní umístění označ TBD; nevymýšlej tabulky ani připojení. Pokud projekt workflow zatím nemá, soubor nevytvářej jen kvůli šabloně. Přítomnost souboru neznamená, že je integrace již funkční.
