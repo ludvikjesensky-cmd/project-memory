@@ -184,3 +184,8 @@ Je to kurátorský proces.
 ## 6. Definition of Done
 
 Konsolidace je hotová, když nová AI instance může otevřít projekt bez této konverzace a neztratí žádné rozhodnutí, failure, lesson nebo změnu stavu, která by mohla materiálně změnit její další postup.
+
+
+## 7. Konsolidace významu workflow
+
+Pokud práce změnila dlouhodobý význam workflow, jeho fází, odborných kritérií nebo návazností, aktualizuj volitelný projektový `project-memory/WORKFLOW.md`. Nezapisuj do něj jednotlivé Tasky, termíny, přiřazení, provozní běhy ani stavové logy; jejich autoritativní domov určuje `PROJECT_OPERATIONS.md` v centrální Supabase. Významná přijatá rozhodnutí nadále patří do DECISIONS, změny současné architektury do ARCHITECTURE. Neexistující provozní integraci nepředstírej.
