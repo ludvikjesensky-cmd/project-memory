@@ -244,3 +244,10 @@ Projekt splňuje standard, pokud nová AI instance bez staré konverzace dokáž
 - Co mám udělat dál?
 
 Pokud ne, Project Memory není dostatečně konsolidovaná.
+
+
+## 18. Projektové workflow a jednotný provozní kontrakt
+
+Pro všechny projekty platí [PROJECT_OPERATIONS.md](PROJECT_OPERATIONS.md). Maximální volitelná hierarchie Project → L1 → L2 → L3 → Workflow → Stage → Task se realizuje společnými pracovními uzly; každá úroveň sdílí identitu, odpovědnost, stav, termíny, vazby a podmínky dokončení, ale projekt si určuje její význam a skutečné použití. Živé uzly a Tasky nejsou kanonickou Markdown pamětí: patří do centrální Supabase. Kancelář a projektová aplikace nad nimi poskytují jednotné pohledy.
+
+Volitelný `project-memory/WORKFLOW.md` je významový dokument bez předepsané struktury. Vysvětluje procesy, fáze a kritéria kvality. Nenahrazuje strojovou definici workflow, aktuální běhy ani úkoly. Při načítání či konsolidaci jej používej, pokud se práce týká významu workflow.
