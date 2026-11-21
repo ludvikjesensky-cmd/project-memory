@@ -199,3 +199,19 @@ projects:
       - Existing visible workspaces are PALME Institut, Tannenberg and Business Brief; sample items require source verification.
       - Universal project navigation and user-selected pinned projects are approved product direction.
       - Project Memory initialized 2026-11-21; Sites source export and data migration remain open.
+
+  - id: terra-platform
+    name: Terra Platform
+    status: active
+    source_of_truth:
+      type: github
+      repository: ludvikjesensky-cmd/terra-platform
+      entrypoint: PROJECT.md
+    operational:
+      type: planned-supabase
+      organization: Geolog
+      note: A dedicated Terra project is not created yet; the existing Geomorfologie projects remain separate.
+    notes:
+      - Cross-domain platform for Geo, Hydro, Climate and related reports; IGP is the first planned service.
+      - The initial GEO analysis covers 20 documents, five report profiles, 71 information items, 27 source requirement groups and 14 QA findings.
+      - Cloudflare is being evaluated as a free hosting option; no Terra service is deployed.
