@@ -175,3 +175,8 @@ Na konci stručně sděl:
 - co bylo zkonsolidováno;
 - co zůstalo TBD nebo OPEN;
 - zda je potřeba nějaký fyzický krok uživatele.
+
+
+## 14. Napojení na jednotné řízení práce
+
+Při založení projektu ověř, zda potřebuje L1/L2/L3, Workflow, Stage či Task; žádná z těchto úrovní kromě Project není povinná. Provozní model a společná pole určuje [PROJECT_OPERATIONS.md](PROJECT_OPERATIONS.md). Projekt si volí význam úrovní, nikoli vlastní nekompatibilní kontrakt. Zaznamenej stabilní identitu projektu a zamýšlený provozní Source of Truth; netvrď, že centrální Supabase integrace existuje bez ověření. Pokud projekt potřebuje odborně vysvětlit procesy, vytvoř volný `project-memory/WORKFLOW.md` s významem workflow a fází. Nevytvářej jej prázdný a nezakládej `TASKS.md` jako paralelní evidenci.
