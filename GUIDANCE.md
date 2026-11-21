@@ -473,11 +473,3 @@ Potom pracuj.
 Z práce vytěž rozhodnutí, failures a lessons.  
 Konsoliduj je do Project Memory.  
 Příští práce začíná z této aktualizované paměti.
-
-## 17. Volitelná mapa workflow
-
-Pokud projekt provozuje opakovatelné procesy, může mít v kořeni `WORKFLOW.md` podle `PROJECT_STANDARD.md` a centrálního `WORKFLOW_TEMPLATE.md`. Dokument popisuje definice procesů a bezpečné odkazy na autoritativní provozní stav pro Kancelář. Nenahrazuje `CURRENT_STATE.md`, `ARCHITECTURE.md` ani provozní databázi. Při zakládání nebo načítání projektu se čte jen tehdy, když je relevantní práce s workflow. Neověřené zdroje se označují TBD.
-
-## 18. Volitelná mapa úkolů
-
-Projektové úkoly lze Kanceláři zpřístupnit volitelným kořenovým `TASKS.md` podle `TASKS_TEMPLATE.md`. Dokument určuje zdroj a mapování polí, nikoli aktuální seznam úkolů. Úkoly zůstávají v projektovém autoritativním systému; osobní a nadprojektové úkoly mohou být autoritativně spravovány Kanceláří. `TASKS.md` nenahrazuje `CURRENT_STATE.md` ani `WORKFLOW.md`.
