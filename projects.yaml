@@ -214,6 +214,6 @@ projects:
     notes:
       - Shared geoscience knowledge base and platform spanning geology, boreholes, water, climate, relief, risks, archival reports and legislation; product families are IGP, HG, ENV, RISK, GEO Screening and GEO Energy. IGP is first in the development sequence.
       - Reports are planned at three explicit levels: research-based, expert-prepared for specialist review, and expert-completed with required investigations, measurements and responsible approval. The initial GEO analysis covers 20 documents, five report profiles, 71 information items, 27 source requirement groups and 14 QA findings.
-      - Cloudflare is being evaluated as a free hosting option; no Terra service is deployed.
+      - Cloudflare Pages is selected for the initial static web shell; the title page exists in `web/index.html` but no Pages project is configured or deployed. The page does not yet use Supabase.
       - Product and technical predecessor: lkostak/geomorfologie processes Demek's 2006 book and has an established web application; Terra's web experience is intended to build on it. Reuse of code/data and database integration remain explicit design decisions.
       - Current next phase: inventory the full GEO Drive folder, verify and analyze each file, then reconcile file-level findings with the existing aggregate catalog.
