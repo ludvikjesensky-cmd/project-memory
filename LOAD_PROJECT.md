@@ -86,3 +86,8 @@ Stačí být připraven pokračovat. Pokud je užitečné shrnutí, uveď struč
 LOAD je hotový, když AI zná dostatek kanonického kontextu pro konkrétní práci a ví, kde ověřit další potřebné skutečnosti.
 
 LOAD neznamená „načti všechno“. Znamená „načti správnou autoritativní znalost pro tuto práci“.
+
+
+## 8. Načítání workflow a pracovního stavu
+
+Pokud práce závisí na významu procesu či fáze, načti existující `project-memory/WORKFLOW.md`. Společnou strukturu pracovních uzlů určuje centrální `PROJECT_OPERATIONS.md`. Pro aktuální vlastníky, stavy, termíny, vazby, workflow běhy a úkoly ověř centrální provozní Supabase, pokud je projekt skutečně připojen. Neodvozuj živé úkoly z Markdownu a neprezentuj plánovanou integraci jako existující.
