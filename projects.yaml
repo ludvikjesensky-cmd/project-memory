@@ -183,3 +183,19 @@ projects:
       - Canonical Project Memory consolidated 2026-11-14 in project-memory/; detailed research, history and provenance in docs/; secondary source in archives/.
       - Institution and research strategy remain conceptual; a related technical archive pilot is deployed and independently linked as palme-pilot, while legal institution, funding, rights and approved publications remain unverified.
       - Tannenberg remains a separate commercial publishing project and Source of Truth.
+
+  - id: kancelar
+    name: KANCELÁŘ
+    status: active
+    source_of_truth:
+      type: github
+      repository: ludvikjesensky-cmd/kancelar
+      entrypoint: PROJECT.md
+    operational:
+      type: planned-central-supabase
+      note: Existing Sites claims database persistence but the actual store is not verified; central Supabase integration is a future design goal.
+    notes:
+      - Portfolio management product, currently represented by an existing ChatGPT Sites prototype.
+      - Existing visible workspaces are PALME Institut, Tannenberg and Business Brief; sample items require source verification.
+      - Universal project navigation and user-selected pinned projects are approved product direction.
+      - Project Memory initialized 2026-11-21; Sites source export and data migration remain open.
