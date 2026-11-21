@@ -473,3 +473,11 @@ Potom pracuj.
 Z práce vytěž rozhodnutí, failures a lessons.  
 Konsoliduj je do Project Memory.  
 Příští práce začíná z této aktualizované paměti.
+
+---
+
+## 20. Jednotné řízení projektů
+
+Projektová paměť a provozní řízení jsou dvě oddělené odpovědnosti. Společný metodický kontrakt pracovních uzlů, hierarchie, vlastníků, stavů, termínů a vazeb určuje [PROJECT_OPERATIONS.md](PROJECT_OPERATIONS.md). Živé pracovní uzly a úkoly mají mít jediný autoritativní domov v centrální Supabase; Kancelář a projektové aplikace je zobrazují a řídí jako různé pohledy nad stejnými daty. Odborná data zůstávají v projektových systémech. Implementace centrálního řízení se ověřuje samostatně; metodika není důkazem nasazení.
+
+Podporovaná maximální hierarchie je Project → L1 → L2 → L3 → Workflow → Stage → Task. Mezistupně jsou volitelné a každý projekt určuje jejich odborný význam. Volitelný `project-memory/WORKFLOW.md` uchovává volně psaný významový popis workflow a fází, nikoli seznam aktuálních úkolů nebo provozní definice.
