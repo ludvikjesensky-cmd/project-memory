@@ -229,3 +229,15 @@ projects:
       - German-language literature lexicon and reading portal; separate Source of Truth from Tannenberg.
       - Initial project memory initialized 2026-11-27.
       - Website, content model, domain ownership and publishing integration remain unverified or open.
+
+  - id: tannenberg-klassik
+    name: Tannenberg Klassik
+    status: active
+    source_of_truth:
+      type: github
+      repository: ludvikjesensky-cmd/tannenberg-klassik
+      entrypoint: PROJECT.md
+    notes:
+      - Separate series Project for Tannenberg's German-language literature editions.
+      - Project Memory initialized 2026-11-27.
+      - Related to Tannenberg publishing house and Deutsche Literatur lesen lexicon; edition/work record identifiers remain open.
