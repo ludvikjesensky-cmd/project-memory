@@ -217,3 +217,15 @@ projects:
       - Cloudflare Pages is selected for the initial static web shell; the title page exists in `web/index.html` but no Pages project is configured or deployed. The page does not yet use Supabase.
       - Product and technical predecessor: lkostak/geomorfologie processes Demek's 2006 book and has an established web application; Terra's web experience is intended to build on it. Reuse of code/data and database integration remain explicit design decisions.
       - Current next phase: inventory the full GEO Drive folder, verify and analyze each file, then reconcile file-level findings with the existing aggregate catalog.
+
+  - id: deutsche-literatur-lesen
+    name: Deutsche Literatur lesen
+    status: active
+    source_of_truth:
+      type: github
+      repository: ludvikjesensky-cmd/deutsche-literatur-lesen
+      entrypoint: PROJECT.md
+    notes:
+      - German-language literature lexicon and reading portal; separate Source of Truth from Tannenberg.
+      - Initial project memory initialized 2026-11-27.
+      - Website, content model, domain ownership and publishing integration remain unverified or open.
