@@ -241,3 +241,20 @@ projects:
       - Separate series Project for Tannenberg's German-language literature editions.
       - Project Memory initialized 2026-11-27.
       - Related to Tannenberg publishing house and Deutsche Literatur lesen lexicon; edition/work record identifiers remain open.
+
+  - id: ai-content-factory
+    name: AI Content Factory
+    status: active
+    source_of_truth:
+      type: github
+      repository: ludvikjesensky-cmd/ai-content-factory
+      entrypoint: PROJECT.md
+    operational:
+      type: not-configured
+      note: No verified production runtime, media storage or central Supabase integration yet; project is in research and pilot validation.
+    notes:
+      - Project Memory initialized 2026-11-28 per CREATE_PROJECT.
+      - Editorially curated AI audiovisual production; first pilot is circa 15-minute relationship videos with subtle 2D animation.
+      - Three planned audio formats: AI voice essay, author's own voice, NotebookLM two-voice conversation.
+      - Production tools and monetization viability have not been experimentally validated; read CURRENT_STATE and OPEN_QUESTIONS before architecture work.
+      - Related inspiration Paper World remains a distinct creative project; do not treat Blender or any renderer as an implemented dependency.
